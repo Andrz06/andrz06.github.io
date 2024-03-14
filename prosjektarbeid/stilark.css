@@ -45,31 +45,4 @@ header .topnav a {
     display: none;
 }
 
-/* @media(max-width: 600px) {
-    
-    header {
-        flex-direction: column;
-    }
 
-    header .topnav {
-        width: 100%;
-    }
-
-    header nav {
-        display: none;
-
-
-    }
-
-    .fa-bars {
-        display: flex;
-        align-items: center;
-    }
-
-    header nav.show {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-    }
-} */
