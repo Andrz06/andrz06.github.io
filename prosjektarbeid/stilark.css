@@ -1,6 +1,7 @@
 body {
     margin: 0;
     text-align: center;
+    
 }
 
 header {
@@ -50,7 +51,15 @@ header .topnav a {
     display: flex;
     flex-direction: row;
     flex: wrap;
+    max-width: 500px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#spill > div{
+    border: solid 2px black;
+    border-radius: 10px;
 }
 
 
