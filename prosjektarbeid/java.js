@@ -1,26 +1,32 @@
 let spillEl = document.querySelector('#spill')
 
-let boks0 = document.querySelector ("#boks0")
-let boks1 = document.querySelector ("#boks1")
-let boks2 = document.querySelector ("#boks2")
-let boks3 = document.querySelector ("#boks3")
-let boks4 = document.querySelector ("#boks4")
-let boks5 = document.querySelector ("#boks5")
 
 
-
-for(i=0; i<6; i++){
-    let divEl = document.createElement('div')
-    
-    divEl.setAttribute("id", `boks${i}`)
-    spillEl.appendChild(divEl)
+let boks1 = {
+    navn: "flappy",
+    bilde: "bilder_index/fugl.jpeg",
 }
+let boks2 = {
+    navn: "minecraft",
+    bilde: "bilder_index/fugl.jpeg",
+}
+let boks3 = {
+    navn: "fortnite",
+    bilde: "bilder_index/fugl.jpeg",
+}
+let spillArr = [boks1, boks2, boks3]
 
-for(i=0; i<6; i++){
-    let pEl = document.createElement('p')
-    let imgEl = document.createElement('img')
-    
-    spillEl.appendChild(divEl)
+for(i=0;i<spillArr.length;i++){
+    let divEl = document.createElement('div');
+    spillEl.appendChild(divEl);
+
+    let navnEl = document.createElement('p');
+    let bildeEl = document.createElement('img')
+    bildeEl.innerHTML = `${spillArr[i].bilde}`
+    navnEl.innerHTML = `${spillArr[i].navn}`;
+    divEl.appendChild(navnEl);
+    divEl.appendChild(bildeEl)
+
 }
 
 
