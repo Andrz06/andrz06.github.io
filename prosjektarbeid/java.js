@@ -14,19 +14,28 @@ let boks3 = {
     navn: "fortnite",
     bilde: "bilder_index/fugl.jpeg",
 }
+let boks4 = {
+    navn: "fortnite",
+    bilde: "bilder_index/fugl.jpeg",
+}
+let boks5 = {
+    navn: "fortnite",
+    bilde: "bilder_index/fugl.jpeg",
+}
 
-let spillArr = [boks1, boks2, boks3]
+let spillArr = [boks1, boks2, boks3, boks4, boks5]
 
 for(i=0;i<spillArr.length;i++){
     let divEl = document.createElement('div');
     spillEl.appendChild(divEl);
 
     let navnEl = document.createElement('p');
-    let bildeEl = document.createElement('img')
-    bildeEl.src = spillArr[i].bilde;
+    //let bildeEl = document.createElement('img')
+    //bildeEl.src = spillArr[i].bilde;
+    divEl.style.backgroundImage = `url(${spillArr[i].bilde})`
     navnEl.innerHTML = `${spillArr[i].navn}`;
     divEl.appendChild(navnEl);
-    divEl.appendChild(bildeEl)
+    //divEl.appendChild(bildeEl)
 
 }
 

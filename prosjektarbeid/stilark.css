@@ -1,7 +1,13 @@
+
+
+
 body {
     margin: 0;
     text-align: center;
-    
+    font-family: "Changa One", sans-serif;
+    background-color: cornflowerblue;
+    color: white;
+
 }
 
 header {
@@ -60,11 +66,32 @@ header .topnav a {
 #spill > div{
     border: solid 2px black;
     border-radius: 10px;
+    font-family: "Chonga One", sans-serif;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 300px;
 }
+#spill p {
+    font-family: "Chonga One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 20px;
 
+}
 #spill > div >img{
     height: 300px;
     width: 300px;
 }
 
-
+@media (max-width: 1000px){
+    #spill{
+        flex-direction: column;
+    }
+    #spill > div {
+        margin: 10px auto auto;
+        
+    }
+}
