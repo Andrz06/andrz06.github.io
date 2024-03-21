@@ -22,7 +22,7 @@ for(i=0;i<spillArr.length;i++){
 
     let navnEl = document.createElement('p');
     let bildeEl = document.createElement('img')
-    bildeEl.innerHTML = `${spillArr[i].bilde}`
+    bildeEl.src = spillArr[i].bilde;
     navnEl.innerHTML = `${spillArr[i].navn}`;
     divEl.appendChild(navnEl);
     divEl.appendChild(bildeEl)
