@@ -60,6 +60,7 @@ header .topnav a {
 #spill > div{
     border: solid 2px black;
     border-radius: 10px;
+    margin: 0;
 }
 
 #spill > div >img{
