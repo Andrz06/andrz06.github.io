@@ -16,6 +16,7 @@ let boks3 = {
 }
 
 let spillArr = [boks1, boks2, boks3]
+
 for(i=0;i<spillArr.length;i++){
     let divEl = document.createElement('div');
     spillEl.appendChild(divEl);

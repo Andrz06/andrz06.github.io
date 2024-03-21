@@ -51,7 +51,7 @@ header .topnav a {
     display: flex;
     flex-direction: row;
     flex: wrap;
-    max-width: 500px;
+    max-width: 1000px;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
@@ -60,6 +60,11 @@ header .topnav a {
 #spill > div{
     border: solid 2px black;
     border-radius: 10px;
+}
+
+#spill > div >img{
+    height: 300px;
+    width: 300px;
 }
 
 
