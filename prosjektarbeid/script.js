@@ -1,6 +1,6 @@
 let spillEl = document.querySelector('#spill')
 
-
+// Dette er en kommentar.
 
 let boks1 = {
     navn: "flappy",
