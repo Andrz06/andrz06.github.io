@@ -53,7 +53,7 @@ header .topnav a {
     display: none;
 }
 
-#spill{
+/* #spill{
     display: flex;
     flex-direction: row;
     flex: wrap;
@@ -61,6 +61,13 @@ header .topnav a {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+} */
+
+#spill {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+
 }
 
 #spill > div{
@@ -71,6 +78,9 @@ header .topnav a {
     background-position: center;
     height: 300px;
     width: 300px;
+    margin: 0px 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #spill p {
     font-family: "Chonga One", sans-serif;
@@ -88,10 +98,13 @@ header .topnav a {
 
 @media (max-width: 1000px){
     #spill{
-        flex-direction: column;
-    }
-    #spill > div {
-        margin: 10px auto auto;
-        
+        grid-template-columns: 1fr 1fr;
     }
 }
+
+@media (max-width: 630px){
+    #spill{
+        grid-template-columns: 1fr;
+    }
+}
+
