@@ -22,22 +22,25 @@ let boks3 = {
 let spillArr = [boks1, boks2, boks3]
 
 for(i=0; i<spillArr.length; i++){
-    let divEl = document.createElement('div');
-   /*  divEl.setAttribute("id", spillArr[i].navn)
+
+    /*  divEl.setAttribute("id", spillArr[i].navn)
     divEl.addEventListener ('click', function(e){
         console.log(e.target.id)
     }) */
-    spillEl.appendChild(divEl);
-
+    
+    let lenkeEl = document.createElement('a')
+    lenkeEl.href = `${spillArr[i].lenke}`;
     
 
-    let navnEl = document.createElement('a');
+    let divEl = document.createElement('div');
     divEl.style.backgroundImage = `url(${spillArr[i].bilde})`
+
+    let navnEl = document.createElement('p');
     navnEl.innerHTML = `${spillArr[i].navn}`;
-    divEl.appendChild(navnEl);
-    navnEl.href = spillArr[i].lenke
-
-
+    
+    lenkeEl.appendChild(navnEl);
+    divEl.appendChild(lenkeEl);
+    spillEl.appendChild(divEl);
 
 }
 
