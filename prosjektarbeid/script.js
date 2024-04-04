@@ -9,7 +9,7 @@ let boks1 = {
 }
 let boks2 = {
     navn: "Tre på rad",
-    bilde: "bilder_index/fugl.jpeg",
+    bilde: "tre på rad/bilder-tre_po_rad/tic.jpg",
     lenke: "tre på rad/tre_po_rad.html"
 }
 let boks3 = {
@@ -17,18 +17,9 @@ let boks3 = {
     bilde: "bilder_index/fugl.jpeg",
     lenke: "flappybird/Flappybird.html"
 }
-let boks4 = {
-    navn: "fortnite",
-    bilde: "bilder_index/fugl.jpeg",
-    lenke: "flappybird/Flappybird.html"
-}
-let boks5 = {
-    navn: "fortnite",
-    bilde: "bilder_index/fugl.jpeg",
-    lenke: "flappybird/flappytest.html"
-}
 
-let spillArr = [boks1, boks2, boks3, boks4, boks5]
+
+let spillArr = [boks1, boks2, boks3]
 
 for(i=0; i<spillArr.length; i++){
     let divEl = document.createElement('div');

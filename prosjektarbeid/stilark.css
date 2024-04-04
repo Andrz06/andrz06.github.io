@@ -81,6 +81,11 @@ header .topnav a {
     margin: 0px 0px 20px;
     margin-left: auto;
     margin-right: auto;
+    
+}
+#spill>div:hover {
+    transition: 0s;
+    transform: scale(1.03);
 }
 #spill p {
     font-family: "Chonga One", sans-serif;
@@ -107,4 +112,5 @@ header .topnav a {
         grid-template-columns: 1fr;
     }
 }
+
 
