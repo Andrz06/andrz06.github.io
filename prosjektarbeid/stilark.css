@@ -53,20 +53,14 @@ header .topnav a {
     display: none;
 }
 
-/* #spill{
-    display: flex;
-    flex-direction: row;
-    flex: wrap;
-    max-width: 1000px;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-} */
+
 
 #spill {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
 
 }
 
