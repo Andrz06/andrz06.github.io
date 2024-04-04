@@ -10,7 +10,7 @@ let boks1 = {
 let boks2 = {
     navn: "Tre på rad",
     bilde: "bilder_index/fugl.jpeg",
-    lenke: "flappybird/Flappybird.html"
+    lenke: "tre på rad/tre_po_rad.html"
 }
 let boks3 = {
     navn: "Egg i kurv",
