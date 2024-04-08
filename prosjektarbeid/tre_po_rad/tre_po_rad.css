@@ -1,19 +1,75 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Changa One", sans-serif;
     text-align: center;
+    background-color: cornflowerblue;
+    margin: 0
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(152, 203, 225);
+
+    align-items: center;
 }
 
-hr {
+header nav {
+    display: flex;
+}
+
+
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+
+}
+
+header a:hover {
+    background-color: rgb(64, 119, 186);
+
+}
+
+header .topnav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .topnav a {
+    font-weight: bold;
+
+}
+
+.fa-bars {
+    color: white;
+    font-size: 30px;
+    padding: 5px 20px;
+    display: none;
+}
+
+ h1{
+    
+    border-bottom: solid 2px white;
+    max-width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    color: white;
+} 
+
+
+
+/*  hr {
     width: 500px;
     height: 2px;
     background-color: black;
-}
+}   */
+
 
 
 #board {
     width: 450px;
     height: 450px;
-    /* background-color: gray; */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -22,8 +78,9 @@ hr {
 .tile {
     width: 147px;
     height: 147px;
+    color: rgb(5, 69, 112);
     
-    /* Text */
+    /* Tekst */
     font-size: 150px;
     display: flex;
     justify-content: center; 
@@ -31,16 +88,36 @@ hr {
 }
 
 .winner {
-    background-color: lightgray;
+    background-color: yellowgreen;
     color: red;
 }
 
 
 .horizontal-line {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
 }
 
 .vertical-line {
-    border-right: 3px solid black;
+    border-right: 3px solid white;
 }
-
+@media (max-width: 550px){
+    hr{
+        max-width: 300px;
+    }
+    #board > div{
+        width: 100px;
+        height: 100px;
+    }
+    #board{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .tile{
+        width: 47px;
+        height: 47px;
+        font-size: 100px;
+    }
+}
