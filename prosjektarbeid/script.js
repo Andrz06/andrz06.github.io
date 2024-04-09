@@ -13,9 +13,9 @@ let boks2 = {
     lenke: "tre_po_rad/tre_po_rad.html"
 }
 let boks3 = {
-    navn: "Egg i kurv",
-    bilde: "bilder_index/fugl.jpeg",
-    lenke: "flappybird/Flappybird.html"
+    navn: "Jokes",
+    bilde: "API/bilder_API/joke.png",
+    lenke: "API/jokes.html"
 }
 
 
