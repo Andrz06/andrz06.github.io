@@ -4,7 +4,7 @@ var playerO = "O";
 var playerX = "X";
 var currPlayer = playerO;
 var gameOver = false;
-
+var winer = document.getElementById('winer')
 
     board = [
                 [' ', ' ', ' '],
@@ -84,6 +84,7 @@ function checkWinner() {
                 tile.classList.add("winner");
             }
             gameOver = true;
+            //winer.innerHTML = `spiller ${} vant!`
             return;
         }
     }
@@ -95,6 +96,7 @@ function checkWinner() {
             tile.classList.add("winner");
         }
         gameOver = true;
+        winer.innerHTML = `spiller ${board[0][0]} vant!`
         return;
     }
 
@@ -115,3 +117,4 @@ function checkWinner() {
         return;
     }
 }
+
