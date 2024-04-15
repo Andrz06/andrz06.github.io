@@ -4,12 +4,17 @@ let score = 0;
 let gameOver = false;
 let lastClickTime = Date.now();
 let timerInterval;
+let BtnEasy = document.getElementById ('easy')
+let BtnMedium = document.getElementById ('medium')
+let BtnHard = document.getElementById ('hard')
+
 
 window.onload = function() {
-    setGame();
+    setGame(1000);
 }
 
-function setGame() {
+
+function setGame(r) {
     //set up the grid in html
     for (let i = 0; i < 9; i++) { //i goes from 0 to 8, stops at 9
         //<div id="0-8"></div>
@@ -18,10 +23,11 @@ function setGame() {
         tile.addEventListener("click", selectTile);
         document.getElementById("board").appendChild(tile);
     }
-    setInterval(setMole, 1000); 
-    setInterval(setMonster, 1000);
-    timerInterval = setInterval(checkTime, 1000); // Add a timer for 1 second
+    setInterval(setMole, r); 
+    setInterval(setMonster, r);
+    timerInterval = setInterval(checkTime, r); // Add a timer for 1 second
 }
+
 
 function getRandomTile() {
     //math.random --> 0-1 --> (0-1) * 9 = (0-9) --> round down to (0-8) integers
@@ -88,4 +94,23 @@ function checkTime() {
         gameOver = true;
         clearInterval(timerInterval); // Stop the timer
     }
+}
+
+BtnMedium.addEventListener("click", function() {
+    resetGame();
+    setGame(1000);
+});
+
+function resetGame() {
+    // Nullstill alle globale variabler
+    currMoleTile = null;
+    currMonsterTile = null;
+    score = 0;
+    gameOver = false;
+    lastClickTime = Date.now();
+    clearInterval(timerInterval);
+    // Tøm brettet
+    document.getElementById("board").innerHTML = "";
+    // Nullstill poengtelleren
+    document.getElementById("score").innerText = "0";
 }
