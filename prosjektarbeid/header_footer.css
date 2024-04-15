@@ -37,7 +37,7 @@ header .topnav a {
 }
 
 /* FOOTER */
-
+/*  
 footer{
     background-color: rgb(64, 119, 186);
     padding: 50px;
@@ -45,9 +45,33 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+*/
+/*  
 footer > div > p {
     text-align: left;
     margin-left: 200px;
     font-family: sans-serif;
 }
+*/
+footer{
+    background-color: rgb(64, 119, 186);
+    padding: 50px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
+}
+footer > div > p {
+    text-align: left;
+    font-family: sans-serif;
+    margin: 15px
+}
+@media (max-width: 745px){
+    footer > div{
+        max-width: 220px;
+    }
+    footer > div > p{
+        
+    }
+}
