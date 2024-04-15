@@ -56,7 +56,7 @@ footer > div > p {
 footer{
     background-color: rgb(64, 119, 186);
     padding: 50px;
-    margin-top: 100px;
+    margin-top: 85px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -68,10 +68,13 @@ footer > div > p {
     margin: 15px
 }
 @media (max-width: 745px){
+    footer {
+        padding: 10px;
+    }
     footer > div{
-        max-width: 220px;
+        width: 90%;
     }
     footer > div > p{
-        
+        text-align: center;   
     }
 }

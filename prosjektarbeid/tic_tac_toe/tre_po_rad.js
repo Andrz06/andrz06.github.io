@@ -31,6 +31,7 @@ var tilecounter = 0;
         }
     }
     turn.innerHTML = `player ${playerO}'s turn!`
+
 function setTile() {
     if (gameOver) {
         return;
@@ -80,6 +81,7 @@ function checkWinner() {
             }
             gameOver = true;
             end()
+            popUp()
             return;
         }
     }
@@ -95,6 +97,7 @@ function checkWinner() {
             }
             gameOver = true;
             end()
+            popUp()
             return;
         }
     }
@@ -108,6 +111,7 @@ function checkWinner() {
         }
         gameOver = true;
         end()
+        popUp()
         return;
     }
 
@@ -126,6 +130,7 @@ function checkWinner() {
         tile.classList.add("winner");
         gameOver = true;
         end()
+        popUp()
         return;
     }
 }
@@ -137,22 +142,23 @@ function end(){
     else {
         currPlayer = playerO;
     }
-    turn.innerHTML = "!"
-    w.innerHTML = `spiller ${currPlayer} vant!`
-}
+    turn.innerHTML = "‎"
+    w.innerHTML = `player ${currPlayer} won`
+} 
+
 
 
 
   // Get the elements by their ID
   var popupLink = document.getElementById("popup-link");
   var popupWindow = document.getElementById("popup-window");
-  var closeButton = document.getElementById("close-button");
-  // Show the pop-up window when the link is clicked
-  popupLink.addEventListener("click", function(event) {
-    event.preventDefault();
+  var PAbtn = document.getElementById("playAgain-button");
+
+  function popUp(e){
     popupWindow.style.display = "block";
-  });
-  // Hide the pop-up window when the close button is clicked
-  closeButton.addEventListener("click", function() {
-    popupWindow.style.display = "none";
-  });      
+  }
+  PAbtn.addEventListener("click", function(){
+    window.location.reload()
+  });  
+
+  
