@@ -9,12 +9,12 @@ let boks1 = {
 }
 let boks2 = {
     navn: "Tre på rad",
-    bilde: "tic_tac_toe/bilder-tre_po_rad/tic.jpg",
+    bilde: "tic_tac_toe/bilder-tre_po_rad/tictactoe.webp",
     lenke: "tic_tac_toe/tic_tac_toe.html"
 }
 let boks3 = {
     navn: "Jokes",
-    bilde: "API/bilder_API/joke.png",
+    bilde: "API/bilder_API/jokes.jpg",
     lenke: "API/jokes.html"
 }
 
