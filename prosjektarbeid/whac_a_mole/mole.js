@@ -15,6 +15,7 @@ window.onload = function() {
 
 
 function setGame(r) {
+    clearInterval(timerInterval)
     //set up the grid in html
     for (let i = 0; i < 9; i++) { //i goes from 0 to 8, stops at 9
         //<div id="0-8"></div>
@@ -23,9 +24,9 @@ function setGame(r) {
         tile.addEventListener("click", selectTile);
         document.getElementById("board").appendChild(tile);
     }
-    setInterval(setMole, r); 
-    setInterval(setMonster, r);
-    timerInterval = setInterval(checkTime, r); // Add a timer for 1 second
+    MoleInterval = setInterval(setMole, r); 
+    MonsterInterval = setInterval(setMonster, r);
+    timerInterval = setInterval(checkTime, 1000); // Add a timer for 1 second
 }
 
 
@@ -89,17 +90,27 @@ function selectTile() {
 
 function checkTime() {
     let currentTime = Date.now();
-    if (currentTime - lastClickTime >= 3000) { // Check if 3 seconds have passed since last click
+    if (currentTime - lastClickTime >= 4000) { // Check if 3 seconds have passed since last click
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
         gameOver = true;
         clearInterval(timerInterval); // Stop the timer
     }
 }
 
+BtnEasy.addEventListener("click", function(){
+    resetGame()
+    setGame(1000)
+})
+
 BtnMedium.addEventListener("click", function() {
-    resetGame();
-    setGame(1000);
-});
+    resetGame()
+    setGame(800)
+})
+
+BtnHard.addEventListener("click", function(){
+    resetGame()
+    setGame(600)
+})
 
 function resetGame() {
     // Nullstill alle globale variabler
@@ -109,6 +120,8 @@ function resetGame() {
     gameOver = false;
     lastClickTime = Date.now();
     clearInterval(timerInterval);
+    clearInterval(MoleInterval);
+    clearInterval(MonsterInterval)
     // Tøm brettet
     document.getElementById("board").innerHTML = "";
     // Nullstill poengtelleren
