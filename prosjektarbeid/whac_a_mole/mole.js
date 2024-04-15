@@ -1,7 +1,9 @@
 let currMoleTile;
-let currPlantTile;
+let currMonsterTile;
 let score = 0;
 let gameOver = false;
+let lastClickTime = Date.now();
+let timerInterval;
 
 window.onload = function() {
     setGame();
@@ -16,8 +18,9 @@ function setGame() {
         tile.addEventListener("click", selectTile);
         document.getElementById("board").appendChild(tile);
     }
-    setInterval(setMole, 1000); // 1000 miliseconds = 1 second, every 1 second call setMole
-    setInterval(setPlant, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
+    setInterval(setMole, 1000); 
+    setInterval(setMonster, 1000);
+    timerInterval = setInterval(checkTime, 1000); // Add a timer for 1 second
 }
 
 function getRandomTile() {
@@ -37,29 +40,29 @@ function setMole() {
     mole.src = "bilder_mole/beaver.png";
 
     let num = getRandomTile();
-    if (currPlantTile && currPlantTile.id == num) {
+    if (currMonsterTile && currMonsterTile.id == num) {
         return;
     }
     currMoleTile = document.getElementById(num);
     currMoleTile.appendChild(mole);
 }
 
-function setPlant() {
+function setMonster() {
     if (gameOver) {
         return;
     }
-    if (currPlantTile) {
-        currPlantTile.innerHTML = "";
+    if (currMonsterTile) {
+        currMonsterTile.innerHTML = "";
     }
-    let plant = document.createElement("img");
-    plant.src = "bilder_mole/monster.png";
+    let monster = document.createElement("img");
+    monster.src = "bilder_mole/monster.png";
 
     let num = getRandomTile();
     if (currMoleTile && currMoleTile.id == num) {
         return;
     }
-    currPlantTile = document.getElementById(num);
-    currPlantTile.appendChild(plant);
+    currMonsterTile = document.getElementById(num);
+    currMonsterTile.appendChild(monster);
 }
 
 function selectTile() {
@@ -67,11 +70,22 @@ function selectTile() {
         return;
     }
     if (this == currMoleTile) {
-        score += 10;
+        score += 1;
         document.getElementById("score").innerText = score.toString(); //update score html
+        lastClickTime = Date.now(); // Update last click time
     }
-    else if (this == currPlantTile) {
+    else if (this == currMonsterTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
         gameOver = true;
+        clearInterval(timerInterval); // Stop the timer if the game is over
+    }
+}
+
+function checkTime() {
+    let currentTime = Date.now();
+    if (currentTime - lastClickTime >= 3000) { // Check if 3 seconds have passed since last click
+        document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
+        gameOver = true;
+        clearInterval(timerInterval); // Stop the timer
     }
 }
