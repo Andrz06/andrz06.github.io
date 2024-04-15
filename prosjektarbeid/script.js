@@ -9,8 +9,8 @@ let boks1 = {
 }
 let boks2 = {
     navn: "Tre på rad",
-    bilde: "tre_po_rad/bilder-tre_po_rad/tic.jpg",
-    lenke: "tre_po_rad/tre_po_rad.html"
+    bilde: "tic_tac_toe/bilder-tre_po_rad/tic.jpg",
+    lenke: "tic_tac_toe/tic_tac_toe.html"
 }
 let boks3 = {
     navn: "Jokes",

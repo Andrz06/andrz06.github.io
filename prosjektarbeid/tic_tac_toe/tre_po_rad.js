@@ -4,8 +4,9 @@ var playerO = "O";
 var playerX = "X";
 var currPlayer = playerO;
 var gameOver = false;
-var w = document.getElementById('w')
-var turn = document.getElementById('turn')
+var w = document.getElementById('w');
+var turn = document.getElementById('turn');
+var tilecounter = 0;
 
     board = [
                 [' ', ' ', ' '],
@@ -29,7 +30,7 @@ var turn = document.getElementById('turn')
             document.getElementById("board").appendChild(tile);
         }
     }
-    turn.innerHTML = `${playerO} sin tur!`
+    turn.innerHTML = `player ${playerO}'s turn!`
 function setTile() {
     if (gameOver) {
         return;
@@ -54,10 +55,16 @@ function setTile() {
     else {
         currPlayer = playerO;
     }
-    turn.innerHTML = `${currPlayer} sin tur!`
+    turn.innerHTML = `player ${currPlayer}'s turn!`
 
     //check winner
+    tilecounter ++
+    console.log(tilecounter)
     checkWinner();
+
+}
+if (tilecounter === 9){
+    gameOver = true;
 }
 
 
@@ -97,6 +104,7 @@ function checkWinner() {
         for (let i = 0; i < 3; i++) {
             let tile = document.getElementById(i.toString() + "-" + i.toString());                
             tile.classList.add("winner");
+            
         }
         gameOver = true;
         end()
