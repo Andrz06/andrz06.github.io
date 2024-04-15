@@ -44,6 +44,7 @@ footer{
     margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    color: white;
 }
 */
 /*  
@@ -74,7 +75,11 @@ footer > div > p {
     footer > div{
         width: 90%;
     }
+<<<<<<< HEAD
     footer > div > p{
         text-align: center;   
     }
+=======
+    
+>>>>>>> 1084a92d6155316e19763d2761b9a2b1b9516266
 }

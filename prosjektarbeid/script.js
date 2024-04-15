@@ -4,7 +4,7 @@ let spillEl = document.querySelector('#spill')
 
 let boks1 = {
     navn: "Whac a mole",
-    bilde: "",
+    bilde: "whac_a_mole/bilder_mole/beaverhome.jpg",
     lenke: "whac_a_mole/mole.html"
 }
 let boks2 = {
