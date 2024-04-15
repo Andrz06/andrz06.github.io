@@ -70,7 +70,7 @@ function selectTile() {
         return;
     }
     if (this == currMoleTile) {
-        score += 1;
+        score += 10;
         document.getElementById("score").innerText = score.toString(); //update score html
         lastClickTime = Date.now(); // Update last click time
     }
