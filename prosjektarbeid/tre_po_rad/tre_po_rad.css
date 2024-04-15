@@ -4,41 +4,7 @@ body {
     background-color: cornflowerblue;
     margin: 0
 }
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(152, 203, 225);
 
-    align-items: center;
-}
-
-header nav {
-    display: flex;
-}
-
-
-
-header a {
-    color: white;
-    text-decoration: none;
-    padding: 20px;
-
-}
-
-header a:hover {
-    background-color: rgb(64, 119, 186);
-
-}
-
-header .topnav {
-    display: flex;
-    justify-content: space-between;
-}
-
-header .topnav a {
-    font-weight: bold;
-
-}
 
 .fa-bars {
     color: white;
@@ -56,16 +22,10 @@ header .topnav a {
     font-size: 50px;
     color: white;
 } 
-
-
-
-/*  hr {
-    width: 500px;
-    height: 2px;
-    background-color: black;
-}   */
-
-
+#turn {
+    color: rgb(5, 69, 112);
+    font-size: 30px;
+}
 
 #board {
     width: 450px;
@@ -100,6 +60,8 @@ header .topnav a {
 .vertical-line {
     border-right: 3px solid white;
 }
+
+
 @media (max-width: 550px){
     hr{
         max-width: 300px;

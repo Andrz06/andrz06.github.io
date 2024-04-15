@@ -4,7 +4,8 @@ var playerO = "O";
 var playerX = "X";
 var currPlayer = playerO;
 var gameOver = false;
-var winer = document.getElementById('winer')
+var w = document.getElementById('w')
+var turn = document.getElementById('turn')
 
     board = [
                 [' ', ' ', ' '],
@@ -28,7 +29,7 @@ var winer = document.getElementById('winer')
             document.getElementById("board").appendChild(tile);
         }
     }
-
+    turn.innerHTML = `${playerO} sin tur!`
 function setTile() {
     if (gameOver) {
         return;
@@ -53,6 +54,7 @@ function setTile() {
     else {
         currPlayer = playerO;
     }
+    turn.innerHTML = `${currPlayer} sin tur!`
 
     //check winner
     checkWinner();
@@ -70,6 +72,7 @@ function checkWinner() {
                 tile.classList.add("winner");
             }
             gameOver = true;
+            end()
             return;
         }
     }
@@ -84,7 +87,7 @@ function checkWinner() {
                 tile.classList.add("winner");
             }
             gameOver = true;
-            //winer.innerHTML = `spiller ${} vant!`
+            end()
             return;
         }
     }
@@ -96,7 +99,7 @@ function checkWinner() {
             tile.classList.add("winner");
         }
         gameOver = true;
-        winer.innerHTML = `spiller ${board[0][0]} vant!`
+        end()
         return;
     }
 
@@ -114,7 +117,18 @@ function checkWinner() {
         tile = document.getElementById("2-0");                
         tile.classList.add("winner");
         gameOver = true;
+        end()
         return;
     }
 }
 
+function end(){
+    if (currPlayer == playerO) {
+        currPlayer = playerX;
+    }
+    else {
+        currPlayer = playerO;
+    }
+    turn.innerHTML = "!"
+    w.innerHTML = `spiller ${currPlayer} vant!`
+}
