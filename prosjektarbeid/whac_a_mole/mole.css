@@ -103,3 +103,21 @@ body {
     text-decoration: none;
     color: black;
   }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th{
+    border-style: solid;
+    border-radius: 2px;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(99, 98, 98);
+  }
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }

@@ -108,7 +108,7 @@ function checkTime() {
 
 BtnEasy.addEventListener("click", function(){
     popupWindow2.style.display = "none";
-   /*  resetGame() */
+   
     setGame(1000)
 })
 
@@ -122,7 +122,7 @@ BtnHard.addEventListener("click", function(){
     setGame(600)
 })
 
-function resetGame() {
+/* function resetGame() {
     // Nullstill alle globale variabler
     currMoleTile = null;
     currMonsterTile = null;
@@ -136,7 +136,7 @@ function resetGame() {
     document.getElementById("board").innerHTML = "";
     // Nullstill poengtelleren
     document.getElementById("score").innerText = "0";
-}
+} */
 
 
 var popupWindow = document.getElementById("popup-window");
