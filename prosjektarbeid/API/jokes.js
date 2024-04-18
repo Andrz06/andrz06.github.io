@@ -12,7 +12,7 @@ async function jokegenerator (){
 i=1
 console.log("hei")
 
-let url = "https://opentdb.com/api.php?amount=30&category=27&difficulty=easy&type=boolean"
+let url = "https://opentdb.com/api.php?amount=10&category=27&difficulty=easy&type=boolean"
 
 let config = {
     headers: {
