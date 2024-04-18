@@ -4,9 +4,9 @@ let score = 0;
 let gameOver = false;
 let lastClickTime = Date.now();
 let timerInterval;
-let BtnEasy = document.getElementById ('easy')
-let BtnMedium = document.getElementById ('medium')
-let BtnHard = document.getElementById ('hard')
+let BtnEasy = document.querySelector ('.easy')
+let BtnMedium = document.querySelector ('.medium')
+let BtnHard = document.querySelector ('.hard')
 
 
 window.onload = function() {
@@ -74,7 +74,9 @@ function setMonster() {
 
 function selectTile() {
     if (gameOver) {
+        popUp()
         return;
+
     }
     if (this == currMoleTile) {
         score += 10;
@@ -85,6 +87,7 @@ function selectTile() {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
         gameOver = true;
         clearInterval(timerInterval); // Stop the timer if the game is over
+        popUp()
     }
 }
 
@@ -94,6 +97,7 @@ function checkTime() {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
         gameOver = true;
         clearInterval(timerInterval); // Stop the timer
+        popUp()
     }
 }
 
@@ -127,3 +131,18 @@ function resetGame() {
     // Nullstill poengtelleren
     document.getElementById("score").innerText = "0";
 }
+
+var popupLink = document.getElementById("popup-link");
+var popupWindow = document.getElementById("popup-window");
+var PAbtn = document.getElementById("playAgain-button");
+var s = document.getElementById ("s")
+
+
+function popUp(e){
+    s.innerHTML = `Score: ${score}`
+    popupWindow.style.display = "block";
+  }
+  PAbtn.addEventListener("click", function(){
+    window.location.reload()
+  });  
+  

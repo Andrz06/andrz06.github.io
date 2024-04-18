@@ -64,10 +64,10 @@ h1{
 #spill p {
     font-family: "Chonga One", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; 
     color: white;
     text-shadow: 2px 2px black;
-    font-size: 20px;
+    font-size: 20px; 
     display: inline;
     width: 100%;
     height: 100%;

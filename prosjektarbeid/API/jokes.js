@@ -1,12 +1,18 @@
-let jokeBtn = document.querySelector('button')
-let jokeEl = document.querySelector ('#joke')
+let Btn = document.querySelector('button')
+let statementEl = document.querySelector ('#statement')
+let rightEl = document.querySelector ('#right')
+let wrongEl = document.querySelector ('#wrong')
 
-jokeBtn.addEventListener ('click', jokegenerator)
+
+Btn.addEventListener ('click', jokegenerator)
 
 
 async function jokegenerator (){
 
-let url = "https://api.api-ninjas.com/v1/jokes?limit="
+i=1
+console.log("hei")
+
+let url = "https://opentdb.com/api.php?amount=30&category=27&difficulty=easy&type=boolean"
 
 let config = {
     headers: {
@@ -14,11 +20,17 @@ let config = {
 }
 }
 
-let response = await fetch (url, config)
+let response = await fetch(url, config)
 
 let data = await response.json()
 
 console.log(data)
 
-jokeEl.innerHTML = data["joke"]
+statementEl.innerHTML = data.results[i]["question"]
+rightEl.innerHTML = data.results[i]["correct_answer"]
+wrongEl.innerHTML = data.results[i].incorrect_answers[0]
+i+=1
+
+
+
 }

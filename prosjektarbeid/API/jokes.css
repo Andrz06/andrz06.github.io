@@ -7,3 +7,19 @@ body {
 
 }
 
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+th {
+    border-style: solid;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    margin: 50px;
+}
+tr{
+    display: flex;
+    justify-content: space-between;
+}
