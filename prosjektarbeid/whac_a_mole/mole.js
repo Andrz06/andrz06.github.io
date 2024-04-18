@@ -9,8 +9,13 @@ let BtnMedium = document.querySelector ('.medium')
 let BtnHard = document.querySelector ('.hard')
 
 
+var popupWindow2 = document.getElementById("popup-window2");
+/* var Sbtn = document.get */
+
 window.onload = function() {
-    setGame(1000);
+    //setGame(1000);
+    popupWindow2.style.display = "block";
+
 }
 
 
@@ -93,7 +98,7 @@ function selectTile() {
 
 function checkTime() {
     let currentTime = Date.now();
-    if (currentTime - lastClickTime >= 4000) { // Check if 3 seconds have passed since last click
+    if (currentTime - lastClickTime >= 6000) { // Check if 3 seconds have passed since last click
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
         gameOver = true;
         clearInterval(timerInterval); // Stop the timer
@@ -102,17 +107,18 @@ function checkTime() {
 }
 
 BtnEasy.addEventListener("click", function(){
-    resetGame()
+    popupWindow2.style.display = "none";
+   /*  resetGame() */
     setGame(1000)
 })
 
 BtnMedium.addEventListener("click", function() {
-    resetGame()
+    popupWindow2.style.display = "none";
     setGame(800)
 })
 
 BtnHard.addEventListener("click", function(){
-    resetGame()
+    popupWindow2.style.display = "none";
     setGame(600)
 })
 
@@ -132,10 +138,11 @@ function resetGame() {
     document.getElementById("score").innerText = "0";
 }
 
-var popupLink = document.getElementById("popup-link");
+
 var popupWindow = document.getElementById("popup-window");
 var PAbtn = document.getElementById("playAgain-button");
 var s = document.getElementById ("s")
+
 
 
 function popUp(e){
