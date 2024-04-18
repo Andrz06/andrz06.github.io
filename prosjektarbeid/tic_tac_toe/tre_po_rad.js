@@ -61,12 +61,13 @@ function setTile() {
     //check winner
     tilecounter ++
     console.log(tilecounter)
+    if (tilecounter == 9){
+        drawUp()
+    }
     checkWinner();
 
 }
-if (tilecounter === 9){
-    gameOver = true;
-}
+
 
 
 function checkWinner() {
@@ -153,12 +154,24 @@ function end(){
   var popupLink = document.getElementById("popup-link");
   var popupWindow = document.getElementById("popup-window");
   var PAbtn = document.getElementById("playAgain-button");
+  var gameOverTxt = document.getElementById("gameOver")
 
   function popUp(e){
+    gameOverTxt.innerHTML = "Congatulations!"
     popupWindow.style.display = "block";
   }
   PAbtn.addEventListener("click", function(){
     window.location.reload()
   });  
+
+  function drawUp(e){
+    gameOverTxt.innerHTML = "It's a draw!"
+    w.innerHTML = "‎"
+    popupWindow.style.display = "block";
+  }
+  PAbtn.addEventListener("click", function(){
+    window.location.reload()
+  });  
+
 
   
