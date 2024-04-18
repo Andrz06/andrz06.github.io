@@ -75,3 +75,31 @@ body {
     text-decoration: none;
     color: black;
   }
+#popup-window2 {
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    background-color:dodgerblue;
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    border-radius: 30px;
+  }  
+  #popup-window2 > h1 {
+    font-size: 50px;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #popup-window2 > div > button > a {
+    text-decoration: none;
+    color: black;
+  }
