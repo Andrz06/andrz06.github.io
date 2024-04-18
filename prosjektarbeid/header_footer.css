@@ -16,8 +16,10 @@ header nav {
 
 header a {
     color: white;
+    -webkit-text-stroke: 1px black;
     text-decoration: none;
     padding: 20px;
+    font-size: 20px;
 
 }
 
@@ -31,10 +33,7 @@ header .topnav {
     justify-content: space-between;
 }
 
-header .topnav a {
-    font-weight: bold;
 
-}
 
 /* FOOTER */
 /*  
@@ -66,7 +65,8 @@ footer{
 footer > div > p {
     text-align: left;
     font-family: sans-serif;
-    margin: 15px
+    margin: 15px;
+    -webkit-text-stroke: 0px black;
 }
 @media (max-width: 745px){
     footer {

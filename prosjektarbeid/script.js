@@ -8,13 +8,13 @@ let boks1 = {
     lenke: "whac_a_mole/mole.html"
 }
 let boks2 = {
-    navn: "Tre på rad",
+    navn: "Tic tac toe",
     bilde: "tic_tac_toe/bilder-tre_po_rad/tictactoe.webp",
     lenke: "tic_tac_toe/tic_tac_toe.html"
 }
 let boks3 = {
-    navn: "Jokes",
-    bilde: "API/bilder_API/jokes.jpg",
+    navn: "True or false",
+    bilde: "API/bilder_API/truefalse.jpg",
     lenke: "API/jokes.html"
 }
 
@@ -43,20 +43,3 @@ for(i=0; i<spillArr.length; i++){
     spillEl.appendChild(divEl);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
