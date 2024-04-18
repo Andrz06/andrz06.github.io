@@ -114,10 +114,22 @@ body {
     font-size: 25px;
     cursor: pointer;
     padding: 5px;
-    background-color: rgb(99, 98, 98);
+    background-color: rgb(5, 69, 112);
+    
   }
-  tr {
+  #difficulty {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
   }
+
+  #GameOver {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  #Home {
+    text-decoration: none;
+    color: white;
+  }
+
