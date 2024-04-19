@@ -139,3 +139,14 @@ table {
     background-color: rgb(5, 69, 112);
     
   }
+
+  #GameOver {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+
+  #Home {
+    text-decoration: none;
+    color: white;
+  }
