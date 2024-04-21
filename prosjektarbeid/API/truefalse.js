@@ -3,6 +3,13 @@ let statementEl = document.querySelector ('#statement')
 let trueEl = document.querySelector ('#true')
 let falseEl = document.querySelector ('#false')
 let scoreEl = document.querySelector ('#score')
+let startEl = document.querySelector('#start')
+let popupWindow2 = document.querySelector('#popup-window2')
+
+
+startEl.addEventListener('click', function(){
+    popupWindow2.style.display = "none";
+})
 
 let score = 0
 let counter = 0
