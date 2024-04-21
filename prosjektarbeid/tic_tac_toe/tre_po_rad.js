@@ -25,7 +25,7 @@ var tilecounter = 0;
             if (c == 0 || c == 1) {
                 tile.classList.add("vertical-line");
             }
-            tile.innerText = "";
+            /* tile.innerText = ""; */
             tile.addEventListener("click", setTile);
             document.getElementById("board").appendChild(tile);
         }
@@ -38,8 +38,8 @@ function setTile() {
     }
 
     let coords = this.id.split("-");    //ex) "1-2" -> ["1", "2'"]
-    let r = parseInt(coords[0]);
-    let c = parseInt(coords[1]);
+    let r = Number(coords[0]);
+    let c = Number(coords[1]);
 
     if (board[r][c] != ' ') { 
         //already taken spot
@@ -76,10 +76,7 @@ function checkWinner() {
         if (board[r][0] == board[r][1] && board[r][1] == board[r][2] && board[r][0] != ' ') {
             //if we found the winning row
             //apply the winner style to that row
-            for (let i = 0; i < 3; i++) {
-                let tile = document.getElementById(r.toString() + "-" + i.toString());
-                tile.classList.add("winner");
-            }
+           
             gameOver = true;
             end()
             popUp()
@@ -92,10 +89,7 @@ function checkWinner() {
         if (board[0][c] == board[1][c] && board[1][c] ==  board[2][c] && board[0][c] != ' ') {
             //if we found the winning col
             //apply the winner style to that col
-            for (let i = 0; i < 3; i++) {
-                let tile = document.getElementById(i.toString() + "-" + c.toString());                
-                tile.classList.add("winner");
-            }
+            
             gameOver = true;
             end()
             popUp()
@@ -105,11 +99,7 @@ function checkWinner() {
 
     //diagonally
     if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') {
-        for (let i = 0; i < 3; i++) {
-            let tile = document.getElementById(i.toString() + "-" + i.toString());                
-            tile.classList.add("winner");
-            
-        }
+    
         gameOver = true;
         end()
         popUp()
@@ -118,17 +108,7 @@ function checkWinner() {
 
     //anti-diagonally
     if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') {
-        //0-2
-        let tile = document.getElementById("0-2");                
-        tile.classList.add("winner");
-
-        //1-1
-        tile = document.getElementById("1-1");                
-        tile.classList.add("winner");
-
-        //2-0
-        tile = document.getElementById("2-0");                
-        tile.classList.add("winner");
+    
         gameOver = true;
         end()
         popUp()
@@ -156,22 +136,19 @@ function end(){
   var PAbtn = document.getElementById("playAgain-button");
   var gameOverTxt = document.getElementById("gameOver")
 
-  function popUp(e){
-    gameOverTxt.innerHTML = "Congatulations!"
+  function popUp(){
+    gameOverTxt.innerHTML = "Congratulations!"
     popupWindow.style.display = "block";
   }
   PAbtn.addEventListener("click", function(){
     window.location.reload()
   });  
 
-  function drawUp(e){
+  function drawUp(){
     gameOverTxt.innerHTML = "It's a draw!"
     w.innerHTML = "‎"
     popupWindow.style.display = "block";
   }
-  PAbtn.addEventListener("click", function(){
-    window.location.reload()
-  });  
 
 
   

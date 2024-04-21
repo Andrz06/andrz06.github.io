@@ -40,11 +40,6 @@ body {
     align-items: center;    
 }
 
-.winner {
-    background-color: yellowgreen;
-    color: red;
-}
-
 
 .horizontal-line {
     border-bottom: 3px solid white;
