@@ -90,7 +90,7 @@ falseEl.addEventListener ("click", function(){
 
 var popupWindow = document.getElementById("popup-window");
 var PAbtn = document.getElementById("playAgain-button");
-var s = document.getElementById ("s")
+var s = document.getElementById ("s");
 
 
 
@@ -98,6 +98,7 @@ function popUp(e){
     s.innerHTML = `Score: ${score}/${counter}`
     popupWindow.style.display = "block";
   }
+  
   PAbtn.addEventListener("click", function(){
     window.location.reload()
   });  

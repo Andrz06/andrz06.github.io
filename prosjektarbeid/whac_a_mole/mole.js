@@ -2,18 +2,19 @@ let currMoleTile;
 let currMonsterTile;
 let score = 0;
 let gameOver = false;
-let lastClickTime = Date.now();
+let lastClickTime;
 let timerInterval;
 let BtnEasy = document.querySelector ('.easy')
 let BtnMedium = document.querySelector ('.medium')
 let BtnHard = document.querySelector ('.hard')
 let boardEl = document.querySelector('#board')
 
+
 var popupWindow2 = document.getElementById("popup-window2");
 
 
 window.onload = function() {
-    //setGame(1000);
+   
     popupWindow2.style.display = "block";
 
 }
@@ -97,7 +98,8 @@ function selectTile() {
 
 function checkTime() {
     let currentTime = Date.now();
-    if (currentTime - lastClickTime >= 6000) { // Check if 6 seconds have passed since last click
+   
+    if (currentTime - lastClickTime >= 4000) { // Check if 4 seconds have passed since last click
         gameOver = true;
         clearInterval(timerInterval); // Stop the timer
         popUp()
@@ -108,6 +110,8 @@ BtnEasy.addEventListener("click", function(){
     popupWindow2.style.display = "none";
     
     setGame(1000)
+    lastClickTime = Date.now()
+
     
     
     
@@ -115,13 +119,17 @@ BtnEasy.addEventListener("click", function(){
 
 BtnMedium.addEventListener("click", function() {
     popupWindow2.style.display = "none";
+    
     setGame(800)
+    lastClickTime = Date.now()
     
 })
 
 BtnHard.addEventListener("click", function(){
     popupWindow2.style.display = "none";
+    
     setGame(600)
+    lastClickTime = Date.now()
     
 
 })
