@@ -24,7 +24,7 @@ body {
 }
 
 #board div {
-    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+    
     width: 180px; 
     height: 180px;
     background-image: url("./bilder_mole/pipe.png");
@@ -32,7 +32,6 @@ body {
 }
 
 #board div img {
-    /* all img tags inside tiles */
     width: 100px;
     height: 100px;
 
@@ -158,13 +157,13 @@ body {
     }
 
     #board div {
-        /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+        
         width: 100px; 
         height: 100px;
     }
 
     #board div img {
-        /* all img tags inside tiles */
+       
         width: 55.5px;
         height: 55.5px;
     }
