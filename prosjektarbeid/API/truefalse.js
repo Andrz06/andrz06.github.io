@@ -8,7 +8,7 @@ let score = 0
 let counter = 0
 let counter2 = 0
 let i = 0
-let data; // Global variabel, samme verdi i og utenfor
+let data; // global varible
 let url;
 let config;
 
@@ -23,11 +23,11 @@ Btn.addEventListener ('click', quizgenerator)
 hent()
 
 async function hent(){
-    let response = await fetch(url, config) // Lokal variabel, eksisterer kun inne i funksjonen hent()
-    data = await response.json()            // Gir verdi til den globale variabelen data
+    let response = await fetch(url, config) // Local variable, only exists inside the hent() function
+    data = await response.json()            // Gives value to the global variable data
     console.log("printer data i funksjon hent")
     console.log(data) 
-    i+=1  // Øker i nå som data er lastet (variabelen data har fått verdi)
+    i+=1  // Increases i now that data has been loaded (the variable data has been given a value)
     console.log(i)
     console.log("har printet data i funksjon hent")
 }
@@ -35,9 +35,9 @@ async function hent(){
 function quizgenerator(){ 
     console.log("starten av quizgenerator")  
     console.log(i)
-    if (i>0 && i<16){       // når i> 0 vet vi at data er lastet, se hent()
+    if (i>0 && i<16){       // when i > 0 we know data is loaded see hent()
         //console.log(data)
-        let index = i-1 // Lokal tellevariabel. Ønsker å ta ut spm 0 når i=1, altså spørsmål i-1
+        let index = i-1 // Local count variable. Want to take out question 0 when i=1, i.e. question i-1
         statementEl.innerHTML = `${data.results[index]["question"]}`
         CA = data.results[index]["correct_answer"]
         console.log(CA) 
