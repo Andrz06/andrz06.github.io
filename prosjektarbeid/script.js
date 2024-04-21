@@ -15,7 +15,7 @@ let boks2 = {
 let boks3 = {
     navn: "True or false",
     bilde: "API/bilder_API/truefalse.jpg",
-    lenke: "API/jokes.html"
+    lenke: "API/truefalse.html"
 }
 
 

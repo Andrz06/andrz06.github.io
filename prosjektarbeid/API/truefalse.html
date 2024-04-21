@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="jokes.css">
+    <link rel="stylesheet" href="truefalse.css">
     <link rel="stylesheet" href="../header_footer.css">
 </head>
 <body>
@@ -22,7 +22,8 @@
         </nav>
     </header>
     <h1>True or False quiz</h1>
-    <p id="button">Click here to get a statement</p>
+    <br>
+    <p id="button">Click here to get a new statement</p>
     <div>
     <p id="statement" data-text="Statement">Statement: </p>
     <table>
@@ -32,6 +33,19 @@
         </tr>
     </table>
     <p id="score">Score:</p>
+
+    <div id="popup-window">
+        <h1 id="gameOver"></h1>
+        <p id="s"> </p>
+
+        <table>
+            <tr id="GameOver">
+                <th id="playAgain-button">Play Again</th>
+                <th id="home-button"><a href="../index.html" id="Home">Home</a></th>
+               
+            </tr>
+        </table>
+    </div>   
     
     </div>
 
@@ -50,6 +64,6 @@
 
     
 
-    <script src="jokes.js"></script>
+    <script src="truefalse.js"></script>
 </body>
 </html>

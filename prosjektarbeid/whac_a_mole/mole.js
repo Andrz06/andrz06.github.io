@@ -122,21 +122,6 @@ BtnHard.addEventListener("click", function(){
     setGame(600)
 })
 
-/* function resetGame() {
-    // Nullstill alle globale variabler
-    currMoleTile = null;
-    currMonsterTile = null;
-    score = 0;
-    gameOver = false;
-    lastClickTime = Date.now();
-    clearInterval(timerInterval);
-    clearInterval(MoleInterval);
-    clearInterval(MonsterInterval)
-    // Tøm brettet
-    document.getElementById("board").innerHTML = "";
-    // Nullstill poengtelleren
-    document.getElementById("score").innerText = "0";
-} */
 
 
 var popupWindow = document.getElementById("popup-window");
