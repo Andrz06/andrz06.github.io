@@ -88,3 +88,32 @@ h1{
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 460px){
+    .innhold{
+        width: 300px;
+    }
+}
+
+
+.innhold{
+    border-style: solid;
+    border-radius: 2px;
+    padding: 20px;
+    background-color: rgb(5, 69, 112);
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.tab {
+    margin-left: 30px;
+}
+#Btn{
+    cursor: pointer;
+
+}
+#Btn2{
+    text-align: center;
+}
+
