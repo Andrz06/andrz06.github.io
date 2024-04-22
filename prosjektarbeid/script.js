@@ -8,7 +8,7 @@ let boks1 = {
     lenke: "whac_a_mole/mole.html"
 }
 let boks2 = {
-    navn: "Tic tac toe",
+    navn: "Tic tac toe (2 player)",
     bilde: "tic_tac_toe/bilder-tre_po_rad/tictactoe.webp",
     lenke: "tic_tac_toe/tic_tac_toe.html"
 }
