@@ -1,4 +1,4 @@
-let currMoleTile;
+let currBeaverTile;
 let currMonsterTile;
 let score = 0;
 let gameOver = false;
@@ -30,7 +30,7 @@ function setGame(r) {
         tile.addEventListener("click", selectTile);
         boardEl.appendChild(tile);
     }
-    MoleInterval = setInterval(setMole, r); 
+    BeaverInterval = setInterval(setBeaver, r); 
     MonsterInterval = setInterval(setMonster, r);
     timerInterval = setInterval(checkTime, 1000); // Add a timer for 1 second
 }
@@ -42,22 +42,30 @@ function getRandomTile() {
     return num.toString();
 }
 
-function setMole() {
+function setBeaver() {
     if (gameOver) {
         return;
     }
+<<<<<<< Updated upstream:prosjektarbeid/whac_a_mole/mole.js
     if (currMoleTile) {
         currMoleTile.innerHTML = "";
     } 
     let mole = document.createElement("img");
     mole.src = "bilder_mole/beaver.png";
+=======
+    if (currBeaverTile) {
+        currBeaverTile.innerHTML = "";
+    }
+    let beaver = document.createElement("img");
+    beaver.src = "bilder_beaver/beaver.png";
+>>>>>>> Stashed changes:prosjektarbeid/whac_a_beaver/beaver.js
 
     let num = getRandomTile();
     if (currMonsterTile && currMonsterTile.id == num) {
         return;
     }
-    currMoleTile = document.getElementById(num);
-    currMoleTile.appendChild(mole);
+    currBeaverTile = document.getElementById(num);
+    currBeaverTile.appendChild(beaver);
 }
 
 function setMonster() {
@@ -68,10 +76,10 @@ function setMonster() {
         currMonsterTile.innerHTML = "";
     }
     let monster = document.createElement("img");
-    monster.src = "bilder_mole/monster.png";
+    monster.src = "bilder_beaver/monster.png";
 
     let num = getRandomTile();
-    if (currMoleTile && currMoleTile.id == num) {
+    if (currBeaverTile && currBeaverTile.id == num) {
         return;
     }
     currMonsterTile = document.getElementById(num);
@@ -84,7 +92,7 @@ function selectTile() {
         return;
 
     }
-    if (this == currMoleTile) {
+    if (this == currBeaverTile) {
         score += 10;
         document.getElementById("score").innerText = score.toString(); //update score html
         lastClickTime = Date.now();  // Update last click time
