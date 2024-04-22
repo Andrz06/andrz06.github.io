@@ -46,19 +46,11 @@ function setBeaver() {
     if (gameOver) {
         return;
     }
-<<<<<<< Updated upstream:prosjektarbeid/whac_a_mole/mole.js
-    if (currMoleTile) {
-        currMoleTile.innerHTML = "";
-    } 
-    let mole = document.createElement("img");
-    mole.src = "bilder_mole/beaver.png";
-=======
     if (currBeaverTile) {
         currBeaverTile.innerHTML = "";
     }
     let beaver = document.createElement("img");
     beaver.src = "bilder_beaver/beaver.png";
->>>>>>> Stashed changes:prosjektarbeid/whac_a_beaver/beaver.js
 
     let num = getRandomTile();
     if (currMonsterTile && currMonsterTile.id == num) {
