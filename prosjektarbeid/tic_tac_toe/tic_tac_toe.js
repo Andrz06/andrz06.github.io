@@ -80,7 +80,7 @@ function checkWinner() {
             gameOver = true;
             end()
             popUp()
-            return;
+            return; 
         }
     }
 
@@ -126,9 +126,6 @@ function end(){
     turn.innerHTML = "‎"
     w.innerHTML = `Player ${currPlayer} won`
 } 
-
-
-
 
   // Get the elements by their ID
   var popupLink = document.getElementById("popup-link");
