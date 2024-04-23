@@ -49,6 +49,7 @@ function setMole() {
     if (currMoleTile) {
         currMoleTile.innerHTML = "";
     } 
+
     let mole = document.createElement("img");
     mole.src = "bilder_mole/beaver.png";
 
