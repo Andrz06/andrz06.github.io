@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-    background: url("./bilder_mole/soil.png");
+    background: url("./bilder_beaver/dirt.png");
     background-size: cover;
     border: 3px solid white;
     border-radius: 25px;
@@ -27,7 +27,7 @@ body {
     
     width: 180px; 
     height: 180px;
-    background-image: url("./bilder_mole/pipe.png");
+    background-image: url("./bilder_beaver/pipe.png");
     background-size: cover;
 }
 
