@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="header_footer.css">
     <link rel="stylesheet" href="stilark.css">
-    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="stilark.css">
+    
 </head>
 <body>
     <header>
@@ -26,13 +27,15 @@
 
    <h1>Please give us feedback!</h1> 
 
+   <br>
+
    <div class="innhold">
     <form action="https://formsubmit.co/andersheitm@gmail.com" method="POST">
 
         <div id="q1" name="Rating">
-            <p>on a scale of 1 to 10, how would you rate your experience on the GameHub</p>
+            <p>On a scale of 1 to 10, how would you rate your experience on the GameHub</p>
             <label>
-                <select name="Rating">
+                <select name="Rating" class="tab">
                     <option selected></option>
                     <option>1</option>
                     <option>2</option>
@@ -50,9 +53,9 @@
         
         <div id="q2" name="Most_Fun">
             <p>Which game did you have the most fun playing?</p>
-            <label><input type="radio" name="Favorite game" value="Whack a mole">Whac a mole</label><br>
-            <label><input type="radio" name="Favorite game" value="Tic tac toe">Tic Tac Toe</label><br>
-            <label><input type="radio" name="Favorite game" value="True or false">True or False</label><br>
+            <label class="tab"><input type="radio" name="Favorite game" value="Whack a beaver">Whac a beaver</label><br>
+            <label class="tab"><input type="radio" name="Favorite game" value="Tic tac toe">Tic Tac Toe</label><br>
+            <label class="tab"><input type="radio" name="Favorite game" value="True or false">True or False</label><br>
         </div><br>
 
         <p>What's your name?</p>
@@ -60,14 +63,17 @@
         <div id="else" name="further comment">
             <p>Anything else?</p>
             <label>
-                <textarea placeholder="further comment..." name="Else"></textarea>
+                <textarea placeholder="Further comment..." name="Else"></textarea>
             </label>
         </div>
         <br>
-        <div>
-            <button type="submit">Bestill</button>
+        <div id="Btn2">
+            <button type="submit" id="Btn">Send in</button>
         </div>
     </form>
+
+    
+    </div>
 
     <footer>
         <div>
@@ -81,9 +87,7 @@
             <p>tlf: +47 932 43 123</p>
         </div>
     </footer>
-    
-    </div>
-    <script src="feedbackjs.js"></script>
+
    
     
 </body>

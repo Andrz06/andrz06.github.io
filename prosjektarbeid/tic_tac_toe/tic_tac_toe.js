@@ -30,7 +30,7 @@ var tilecounter = 0;
             document.getElementById("board").appendChild(tile);
         }
     }
-    turn.innerHTML = `player ${playerO}'s turn!`
+    turn.innerHTML = `Player ${playerO}'s turn!`
 
 function setTile() {
     if (gameOver) {
@@ -56,7 +56,7 @@ function setTile() {
     else {
         currPlayer = playerO;
     }
-    turn.innerHTML = `player ${currPlayer}'s turn!`
+    turn.innerHTML = `Player ${currPlayer}'s turn!`
 
     //check winner
     tilecounter ++
@@ -124,7 +124,7 @@ function end(){
         currPlayer = playerO;
     }
     turn.innerHTML = "‎"
-    w.innerHTML = `player ${currPlayer} won`
+    w.innerHTML = `Player ${currPlayer} won`
 } 
 
   // Get the elements by their ID

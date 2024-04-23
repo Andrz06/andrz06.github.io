@@ -3,13 +3,13 @@ let spillEl = document.querySelector('#spill')
 
 
 let boks1 = {
-    navn: "Whac a mole",
-    bilde: "whac_a_mole/bilder_mole/beaverhome.jpg",
-    lenke: "whac_a_mole/mole.html"
+    navn: "Whac a beaver",
+    bilde: "whac_a_beaver/bilder_beaver/beaverhome.jpg",
+    lenke: "whac_a_beaver/beaver.html"
 }
 let boks2 = {
     navn: "Tic tac toe (2 player)",
-    bilde: "tic_tac_toe/bilder-tre_po_rad/tictactoe.webp",
+    bilde: "tic_tac_toe/bilder-tic_tac_toe/tictactoe.webp",
     lenke: "tic_tac_toe/tic_tac_toe.html"
 }
 let boks3 = {
@@ -23,11 +23,6 @@ let spillArr = [boks1, boks2, boks3]
 
 for(i=0; i<spillArr.length; i++){
 
-    /*  divEl.setAttribute("id", spillArr[i].navn)
-    divEl.addEventListener ('click', function(e){
-        console.log(e.target.id)
-    }) */
-    
     let lenkeEl = document.createElement('a')
     lenkeEl.href = `${spillArr[i].lenke}`;
     
