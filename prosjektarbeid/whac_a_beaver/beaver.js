@@ -150,4 +150,5 @@ function popUp(e){
   PAbtn.addEventListener("click", function(){
     window.location.reload()
   });  
-  
+
+ 
