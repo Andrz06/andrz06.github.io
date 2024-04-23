@@ -46,12 +46,12 @@ function setBeaver() {
     if (gameOver) {
         return;
     }
-    if (currMoleTile) {
-        currMoleTile.innerHTML = "";
+    if (currBeaverTile) {
+        currBeaverTile.innerHTML = "";
     } 
 
-    let mole = document.createElement("img");
-    mole.src = "bilder_mole/beaver.png";
+    let beaver = document.createElement("img");
+    beaver.src = "bilder_beaver/beaver.png";
 
     let num = getRandomTile();
     if (currMonsterTile && currMonsterTile.id == num) {
