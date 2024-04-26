@@ -10,6 +10,7 @@ body {
 table {
     margin-left: auto;
     margin-right: auto;
+    max-width: 300px;
    
 }
 th {
@@ -30,12 +31,15 @@ tr{
 #button, #statement {
     border-style: solid;
     border-radius: 2px;
-    padding: 10px;
     max-width: 200px;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(5, 69, 112);
 }
+
+
+
 #button {
     cursor: pointer;
 }
