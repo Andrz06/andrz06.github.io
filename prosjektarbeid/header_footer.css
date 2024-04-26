@@ -47,7 +47,7 @@ footer > div > p {
     text-align: left;
     font-family: sans-serif;
     margin: 15px;
-    -webkit-text-stroke: 0px black;
+     -webkit-text-stroke: 0px black; 
 }
 @media (max-width: 745px){
     footer {
