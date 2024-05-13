@@ -49,39 +49,6 @@ body {
     border-right: 3px solid white;
 }
 
-/* #popup-window {
-    position: fixed;
-    width: 500px;
-    height: 300px;
-    background-color:dodgerblue;
-    border: 1px solid black;
-    padding: 10px;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    display: none;
-    border-radius: 30px;
-  }  
-  #popup-window > h1 {
-    font-size: 50px;
-    text-align: center;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #popup-window > p {
-    font-size: 35px;
-    color: white;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    }
- */
 @media (max-width: 550px){
     hr{
         max-width: 300px;
@@ -103,23 +70,6 @@ body {
         font-size: 100px;
     }
 }
-/* @media (max-width: 570px){
-    #popup-window{
-        width: 300px;
-        height: 200px;
-    }
-    #popup-window > h1 {
-        font-size: 35px;
-        text-align: center;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      #popup-window > p {
-        font-size: 20px;
-        color: white;
-      }
-} */
 
 table {
     margin-left: auto;
@@ -135,13 +85,4 @@ table {
     
   }
 
-  /* #GameOver {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-  }
-
-  #Home {
-    text-decoration: none;
-    color: white;
-  } */
+ 
