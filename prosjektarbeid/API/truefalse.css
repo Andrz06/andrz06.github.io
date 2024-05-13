@@ -54,7 +54,7 @@ th:hover {
 }
 
 
-#popup-window {
+/* #popup-window {
     position: fixed;
     width: 500px;
     height: 300px;
@@ -109,6 +109,10 @@ th:hover {
     font-size: 35px;
     color: white;
     -webkit-text-stroke: 1.3px black;
+  } */
+  #popup-window{
+    width: 400px;
+    height: 200px;
   }
   #start {
     border-style: solid;
@@ -117,33 +121,44 @@ th:hover {
     cursor: pointer;
     padding: 5px;
     background-color: rgb(5, 69, 112); 
+    
   }
 
-  @media (max-width: 570px){
-    #popup-window {
+  #popup-window2 > p{
+    font-size: 23px;
+  }
+  #popup-window2, popup-window > th{
+    font-size: 20px;
+  }
+  #popup-window2 {
+    padding: 10px;
+  }
+
+   @media (max-width: 570px){
+    #popup-window2 {
         width: 300px;
-        height: 200px;
+        height: 220px;
+    }
+    #popup-window {
+      width: 300px;
+      height: 150px;
+    }
+    #playAgain-button, #home-button {
+      font-size: 20px;
     }
     #popup-window > h1 , #popup-window2 > h1{
         font-size: 35px;
-        text-align: center;
         max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
       }
       #popup-window > p , #popup-window2 > p{
         font-size: 20px;
         color: white;
       }
-      #popup-window2 {
-        width: 320px;
-        height: 220px;
-      }
-      
-      
-      
+       
 }
 
+
+/*
 #GameOver {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -152,10 +167,10 @@ th:hover {
   #Home {
     text-decoration: none;
     color: white;
-  }
+  } */
 
 #score {
-    margin-bottom: 190px;
+    margin-bottom: 200px;
 }
 
 #start {
