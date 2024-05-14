@@ -13,13 +13,6 @@ let boardEl = document.querySelector('#board')
 var popupWindow2 = document.getElementById("popup-window2");
 
 
-/* window.onload = function() {
-   
-    popupWindow2.style.display = "block";
-
-} */
-
-
 function setGame(r) {
     clearInterval(timerInterval)
     //set up the grid in html
@@ -106,6 +99,7 @@ function checkTime() {
         popUp()
     }
 }
+
 
 BtnEasy.addEventListener("click", function(){
     popupWindow2.style.display = "none";
